@@ -13,6 +13,7 @@ import IntervalHookCounter from './components/IntervalHookCounter';
 import MouseContainer from './components/MouseContainer';
 import CounterOne from './components/CounterOne';
 import CounterTwo from './components/CounterTwo';
+import CounterThree from './components/CounterThree';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -20,7 +21,8 @@ function App() {
   return (
 
     <div className="App">
-      <CounterTwo />
+      <CounterThree />
+      {/* <CounterTwo /> */}
       {/* <CounterOne /> */}
       {/* 
       <UserContext.Provider value={'Krishna'}>
