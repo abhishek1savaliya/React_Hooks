@@ -14,12 +14,12 @@ function Datafetching() {
                 console.log(err)
             })
     }, [idFromButtonClick])
-    const handleClick = ()=>{
+    const handleClick = () => {
         setidFromButtonClick(id)
     }
     return (
         <div>
-            <input type="text" value={id} onChange={e=>setid(e.target.value)} />
+            <input type="text" value={id} onChange={e => setid(e.target.value)} />
             <button type='button' onClick={handleClick}>Fetch Post</button>
             <div>{post.title}</div>
             {/* <ul>
