@@ -19,11 +19,11 @@ function App() {
 
     <div className="App">
 
-    <UserContext.Provider value={'Krishna'}>
-      <ChannelContext.Provider value={'Jay Radha Madhav'}>
-      <ComponentC />
-      </ChannelContext.Provider>
-    </UserContext.Provider>
+      <UserContext.Provider value={'Krishna'}>
+        <ChannelContext.Provider value={'Jay Radha Madhav'}>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
 
 
 
