@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useReducer } from 'react';
 import ClassCounter from './components/ClassCounter';
 import ComponentC from './components/ComponentC';
 import Datafetching from './components/Datafetching';
@@ -14,14 +14,37 @@ import MouseContainer from './components/MouseContainer';
 import CounterOne from './components/CounterOne';
 import CounterTwo from './components/CounterTwo';
 import CounterThree from './components/CounterThree';
+import ComponentA from './components/ComponentA';
+import ComponentB from './components/ComponentB';
 
-export const UserContext = React.createContext()
-export const ChannelContext = React.createContext()
+export const CountContext = React.createContext()
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment': return state + 1
+    case 'decrement': return state - 1
+    case 'reset': return initialState
+    default: return state
+  }
+}
+
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
   return (
 
     <div className="App">
-      <CounterThree />
+      <div>
+        Count - {count}
+        <CountContext.Provider value={{ countState: count, countdispatch: dispatch }}>
+          <ComponentA />
+          <ComponentB />
+          <ComponentC />
+        </CountContext.Provider>
+
+      </div>
+
+      {/* <CounterThree /> */}
       {/* <CounterTwo /> */}
       {/* <CounterOne /> */}
       {/* 
