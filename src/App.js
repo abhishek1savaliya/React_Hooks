@@ -1,17 +1,16 @@
 import './App.css';
-import React from 'react';
-import FocusInput from './components/FocusInput';
-import ClassTimes from './components/ClassTimes';
-import HookTimer from './components/HookTimer';
+import React, { useEffect } from 'react';
 
+import DocTitleOne from './components/DocTitleOne';
+import DocTitleTwo from './components/DocTitleTwo';
 
 function App() {
-
   return (
-
     <div className="App">
-      <HookTimer />
-      <ClassTimes />
+      <DocTitleOne />
+      <DocTitleTwo />
+      {/* <HookTimer /> */}
+      {/* <ClassTimes /> */}
       {/* <FocusInput /> */}
     </div>
   );
