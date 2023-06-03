@@ -1,14 +1,11 @@
 import './App.css';
 import React from 'react';
-import Counter from './components/Counter';
-import CounterTwo from './components/CounterTwo';
-
+import UserForm from './components/UserForm';
 
 function App() {
   return (
     <div className="App">
-          <Counter />
-          <CounterTwo />
+          <UserForm />
     </div>
   );
 }
